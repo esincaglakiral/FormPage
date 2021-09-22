@@ -1,0 +1,175 @@
+html{
+   
+
+}
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+    /* cihazda bu fontlardan hangisi mevcutsa o font çalışır */
+    font-style: normal;
+    font-size: 16px;
+    font-weight:unset;
+    color: rgb(22, 22, 22);
+    background-image: url('tatill.jpg');
+    background-repeat: no-repeat; /* tekrarlama yapmaması için*/
+    background-size: cover; /*etrafını sarması için*/
+    
+}
+
+form{
+   
+    padding: 50px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  
+
+}
+
+.form-row{
+
+   margin-bottom: 20px;
+   min-height: 35px;
+   max-width: 300px;
+ 
+}
+
+}
+.form-row label{
+
+    display: block;
+    margin-bottom: 6px;
+
+}
+input[type="text"],
+input[type="tel"],
+input[type="eposta"],
+select,
+textarea{
+    width:100%;
+    border-radius: 5px;
+    height: 35px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color:white;
+   
+}
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="eposta"]::placeholder,
+input[type="date"]::placeholder,
+input[type="sayi"]::placeholder,
+select[name="sehir"]::placeholder
+textarea::placeholder{
+    color: rgb(175, 175, 175);
+
+}
+
+input[type="text"]:focus, 
+input[type="tel"]:focus, 
+input[type="email"]:focus, 
+input[type="date"]:focus,
+input[type="sayi"]:focus,
+select:focus,
+textarea:focus {
+    outline:0;
+    border-color: rgb(68, 176, 255);
+
+}
+
+textarea{
+    height: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 50px;
+    max-height: 200px;
+    max-width: 300px;
+    resize: vertical;
+
+}
+select{
+
+    height: 40px;
+  
+ }
+.radio-container label{
+
+    display: inline-block;
+}
+.radio-container label + label{
+
+   margin-left: 40px;
+}
+button{
+
+    display: inline-block;
+    width:auto;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color: #eee;
+   
+}
+button[type="submit"]{
+color: white;
+background-color:rgb(68, 176, 255) ;
+margin-left: 10px;
+}
+
+input[type="sayi"]{
+    border-radius: 5px;
+    width: 300px;
+    height: 35px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color:white;
+   
+   
+}
+input[type="date"]{
+    border-radius: 5px;
+    width: 300px;
+    height: 38px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color:white;
+   
+  
+}
+select[name="sehir"]{
+    border-radius: 5px;
+    width: 331px;
+    height: 38px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color:white;
+
+}
+select[name="fiyat"]{
+    border-radius: 5px;
+    width: 331px;
+    height: 38px;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: inherit;
+    font-family: inherit;
+    background-color:white;
+
+}
