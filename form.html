@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Tatil Formu</title>
+    <link rel="stylesheet" href="form.css"/>
+</head>
+<body>
+
+<!-- 
+    +adı* (zorunlu olanlara * koydum)
+    +soyad*
+    +telefon*
+    +email*
+    +fiyat
+    +konu
+    +mesaj
+    +tatil yapmak istediği şehir
+    +kişi sayısı
+    +kalınacak mekan
+
+    reset ve submit POST:https://httpbin.org/post
+ -->
+ <!-- zorunlu olarak doldurulması/seçilmesi gereken alanlara inputta required diye bir etkiet atamamız gerekiyor -->
+
+<form action="https://httpbin.org/post" method="POST">
+
+  <input type="hidden" value="tatil" name="product">
+    <div class="form-row">
+      <label for="isim">İsim</label>
+      <input name="isim"
+      id="isim" 
+      type="text" 
+      required 
+      placeholder="Ahmet" />
+    </div>
+<!-- kutucukların alt alta olması için div etiketi içerisine alarak gruplandırıyoruz -->
+
+    <div class="form-row">
+      <label for="soyisim">Soyisim</label>
+      <input name="soyisim" 
+      id="soyisim" 
+      type="text" 
+      required 
+      placeholder="Yılmaz"/>
+    </div>
+<!-- label'ın görevi inputtaki ıd'yi refere ederiz başlığımız ıd de verdğimiz ad olur inputa focuslanır.  -->
+    <div class="form-row">
+        <label for="tel">Telefon Numarası</label>
+        <input name="tel" id="tel" type="text"  required />
+      </div>
+
+      <div class="form-row">
+        <label for="eposta">E-Posta Adresi</label>
+        <input name="eposta" id="eposta" type="text" required />
+      </div>
+<!-- sıfırlandığında hangi butonda gözükmesini istersek ona  value'den sonra selected etiketini atarız -->
+      <div class="form-row">
+      <label for="sehir">Tatil Yapmak İstediğiniz Şehir</label>
+          <select name="sehir" id="sehir" placeholder="İstanbul">
+          <option value="istanbul" selected>İstanbul</option>
+          <option value="antalya">Antalya</option>
+          <option value="izmir">İzmir</option>
+          <option value="mugla">Muğla</option>
+          <option value="canakkale">Çanakkale</option>
+          <option value="balıkesir">Balıkesir</option>
+          <option value="kocaeli">Kocaeli</option>
+          <option value="nevsehir">Nevşehir</option>
+      </select>
+      </div>
+
+<!-- seçmeli bir kutucuk olacaksa seçenekleri select etiketi altında option değerleri ile belirleyebiliriz -->
+<!-- radio elemanı ise kullancının seçenekler arasında bir tanesini seçmesine yarayan bir input elemanıdır. -->
+<!-- radiodan sonra da her input için name'ını yazarsak aynı name'ler olduğu için sadece birini seçmemizi sağlar -->
+    <div class="form-row">
+      <p>Bunlardan hangisini istiyorsunuz?</p>
+      <div class="radio-container">
+    <label><input type="radio" name="kalma" value="evkiralamak" checked/>Ev</label>
+    <label><input type="radio" name="kalma" value="otel"/>Otel</label>
+    <label><input type="radio" name="kalma" value="kamp"/>Çadır/Kamp</label>
+    </div></div>
+      <!-- butonların alt alta çıkması için input'u label içerisine aldık başlığı da p olarak yazdık -->
+      <div class="form-row">
+        <label for="fiyat">Fiyat Aralığı (günlük fiyattır)</label>
+        <select name="fiyat" id="fiyat">
+            <option value="0-200">0-200 tl arası</option>
+            <option value="200-500">200-500 tl arası</option>
+            <option value="500-1000">500-1000 tl arası</option>
+            <option value="1000-1200">1000-1200 tl arası</option>
+            <option value="1200-1500">1200-1500 tl arası</option>
+            <option value="1500-2000">1500-2000 tl arası</option>
+            <option value="2000'den fazla">2000 tl ve daha fazlası</option>
+
+        </select>
+    </div>
+   
+   
+      <div class="form-row">
+      <label for="kisisayisi">Kişi Sayısını Giriniz</label>
+      <input type="sayi" id="kisisayisi" name="kisisayisi" min="1" max="30">
+      
+</div>
+
+
+       <div class="form-row">
+        <label for="datemin">Gidiş Tarihinizi Seçiniz</label>
+        <input type="date" id="datemin" name="datemin" min="2021-02-02"><br><br>
+      
+        <label for="datemin">Dönüş Tarihinizi Seçiniz</label>
+        <input type="date" id="datemin" name="datemin" min="2021-02-03"><br><br>
+
+       </div>
+
+      <div class="form-row">
+        <label for="konu">Konu</label>
+        <input id="konu" type="text" />
+      </div>
+
+      <div class="form-row">
+        <label for="aciklama">Eklemek İstediğiniz Bilgi</label>
+        <textarea  name="aciklama" id="aciklama" cols="50" rows="3"></textarea>
+      </div>
+      
+      <div class="form-row">
+          <button type="reset">Sıfırla</button>
+          <button type="submit">Gönder</button>
+      </div>
+
+
+</form>
+    
+</body>
+</html>
